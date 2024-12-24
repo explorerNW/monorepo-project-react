@@ -313,7 +313,7 @@ module.exports = {
       // By default, anything error message that appears the packages directory
       // must have a corresponding error code. The exceptions are defined
       // in the next override entry.
-      files: ['packages/**/*.js'],
+      files: ['packages/**/*.ts', 'packages/**/*.tsx'],
       rules: {
         'react-internal/prod-error-codes': ERROR,
       },
@@ -323,8 +323,8 @@ module.exports = {
       // are environments where bundle size isn't a concern, like tests
       // or Node.
       files: [
-        'packages/**/__tests__/*.js',
-        'packages/**/npm/*.js',
+        'packages/**/*.tsx',
+        'packages/**/*.ts',
       ],
       rules: {
         'react-internal/prod-error-codes': OFF,
@@ -412,7 +412,8 @@ module.exports = {
       files: [
         '**/__tests__/**/*.js',
         'scripts/**/*.js',
-        'packages/*/npm/**/*.js',
+        'packages/**/*.ts',
+        'packages/**/*.tsx',
         'packages/dom-event-testing-library/**/*.js',
         'packages/react-devtools*/**/*.js',
         'dangerfile.js',
