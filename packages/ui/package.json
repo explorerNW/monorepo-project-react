@@ -1,0 +1,28 @@
+{
+  "name": "@me/ui",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsup --watch",
+    "build": "tsup",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "explorerNW",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "react": "19.0.0",
+    "react-dom": "19.0.0"
+  },
+  "peerDependencies": {
+    "react": "19.0.0",
+    "react-dom": "19.0.0"
+  },
+  "devDependencies": {
+    "@me/core": "workspace:*",
+    "terser": "^5.37.0",
+    "tsup": "8.3.5",
+    "typescript": "5.7.2"
+  }
+}
