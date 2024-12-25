@@ -2,6 +2,7 @@
   "name": "@me/ui",
   "version": "1.0.0",
   "type": "module",
+  "main": "./src/index.ts",
   "scripts": {
     "dev": "tsup --watch",
     "build": "tsup",
@@ -11,10 +12,6 @@
   "author": "explorerNW",
   "license": "ISC",
   "description": "",
-  "dependencies": {
-    "react": "19.0.0",
-    "react-dom": "19.0.0"
-  },
   "peerDependencies": {
     "react": "19.0.0",
     "react-dom": "19.0.0"
