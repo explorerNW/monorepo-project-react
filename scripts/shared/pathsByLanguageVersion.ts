@@ -10,6 +10,7 @@
 const esNextPaths = [
   // Internal forwarding modules
   'packages/*/*.js',
+  'packages/*/**/*.ts',
   'packages/*/esm/*.js',
   'packages/use-sync-external-store/shim/**/*.js',
   'packages/use-sync-external-store/with-selector/**/*.js',
