@@ -10,6 +10,7 @@
 const esNextPaths = [
   // Internal forwarding modules
   'packages/*/*.js',
+  'packages/*/**/*.ts',
   'packages/*/esm/*.js',
   'packages/use-sync-external-store/shim/**/*.js',
   'packages/use-sync-external-store/with-selector/**/*.js',
@@ -20,6 +21,8 @@ const esNextPaths = [
   // Shims and Flow environment
   'scripts/flow/*.js',
   'scripts/rollup/shims/**/*.js',
+  'apps/front-end/**/*.ts',
+  'apps/back-end/**/*.ts',
 ];
 
 // Files that we distribute on npm that should be ES5-only.
