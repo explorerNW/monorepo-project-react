@@ -1,4 +1,7 @@
-
 export default function Button() {
-    return <><button>button</button></>;
+  return (
+    <>
+      <button>button</button>
+    </>
+  );
 }

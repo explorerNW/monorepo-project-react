@@ -1,21 +1,20 @@
 import React, { useState } from 'react';
 
 const useInput = () => {
-    const [value, setValue] = useState();
-    const onChange = (e) => {
-        setValue(e.target.value);
-    }
+  const [value, setValue] = useState();
+  const onChange = e => {
+    setValue(e.target.value);
+  };
 
-    return { value, onChange };
-}
+  return { value, onChange };
+};
 
 export function Input({ className }) {
-    
-    const {value, onChange} = useInput();
+  const { value, onChange } = useInput();
 
-    return (
-        <>
-            <input className={className} value={value} onChange={onChange}  />
-        </>
-    );
+  return (
+    <>
+      <input className={className} value={value} onChange={onChange} />
+    </>
+  );
 }
