@@ -8,10 +8,11 @@ export default defineConfig({
     pluginModuleFederation({
       name: 'federation_consumer',
       remotes: {
-        federation_provider: 'federation_provider@http://localhost:3000/mf-manifest.json'
+        federation_provider:
+          'federation_provider@http://localhost:3000/mf-manifest.json',
       },
-      shared: ['react', 'react-dom']
-    })
+      shared: ['react', 'react-dom'],
+    }),
   ],
   server: {
     port: 3001,

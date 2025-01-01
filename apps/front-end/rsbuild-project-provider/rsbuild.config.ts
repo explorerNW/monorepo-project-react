@@ -8,12 +8,12 @@ export default defineConfig({
     pluginModuleFederation({
       name: 'federation_provider',
       exposes: {
-        './button': './src/Button.tsx'
+        './button': './src/Button.tsx',
       },
-      shared: ['react', 'react-dom']
-    })
+      shared: ['react', 'react-dom'],
+    }),
   ],
   server: {
-    port: 3000
-  }
+    port: 3000,
+  },
 });

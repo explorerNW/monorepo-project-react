@@ -1,8 +1,11 @@
-dist
+build
+coverage
+
 **/dist
 **/node_modules
 build/
 coverage/
 fixtures/
 scripts/
-@mf-types/**/*
+**/@mf-types/*
+@mf-types

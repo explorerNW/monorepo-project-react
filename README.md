@@ -1,10 +1,13 @@
 # monorepo-project-react
+
 monorepo project
 
-
 ## 架构设计与工程化
+
 ### 技术方案
+
 react
+
 - React
 - React Hook
 - redux
@@ -43,4 +46,3 @@ react
 - threejs, react-three-fiber
 - anltr
 - dnd-kit
-

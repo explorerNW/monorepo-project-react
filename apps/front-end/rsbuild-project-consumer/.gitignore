@@ -7,6 +7,8 @@
 node_modules
 dist/
 
+@mf-types/
+
 # IDE
 .vscode/*
 !.vscode/extensions.json
