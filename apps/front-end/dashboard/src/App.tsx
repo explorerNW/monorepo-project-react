@@ -30,7 +30,11 @@ function App() {
       <p className='read-the-docs'>
         Click on the Vite and React logos to learn more
       </p>
-      <Input />
+      <Input<{ name: string }>
+        className={'border'}
+        list={[{ name: 'a' }, { name: 'b' }, { name: 'c' }, { name: 'd' }]}
+        field='name'
+      />
     </>
   );
 }
