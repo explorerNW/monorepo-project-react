@@ -10,8 +10,8 @@
   "scripts": {
     "build": "tsup index.ts"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["commander", "tsup"],
+  "author": "explorerNW",
   "license": "ISC",
   "devDependencies": {
     "commander": "^13.0.0",
