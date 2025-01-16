@@ -6,8 +6,7 @@ function useInput<T>(list: T[] = [], field: string) {
     setValue(e.target.value);
   }, []);
   const filteredList = useMemo(() => {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    return list.filter(item => (item[field] as any).includes(value));
+    return list.filter(item => item[field].includes(value));
   }, [list, value, field]);
 
   return { value, filteredList, onChange };
