@@ -1,8 +1,6 @@
-import { useEffect, useRef, useState } from 'react';
-import { calculator } from '@me/utils';
+import { useEffect, useRef } from 'react';
+import { worker, assembly } from '@me/utils';
 
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
 import './App.css';
 
 import { Input } from '@me/ui';
@@ -23,15 +21,17 @@ const performance = () => {
 };
 
 function App() {
-  const [count, setCount] = useState(0);
-
   const ref = useRef<{ loaded: boolean }>({ loaded: false });
 
   useEffect(() => {
     if (!ref.current.loaded) {
       performance();
-      calculator([1, 2, 3, 4, 5]).then(res => {
-        console.log('res: ', res);
+      console.log(
+        'assembly.calculator: ',
+        assembly.calculator([1, 2, 3, 4, 5, 6, 7, 8, 9])
+      );
+      worker.calculator([1, 2, 3, 4, 5, 6, 7, 8, 9]).then(res => {
+        console.log('worker.calculator: ', res);
       });
       ref.current.loaded = true;
     }
@@ -39,26 +39,6 @@ function App() {
 
   return (
     <>
-      <div>
-        <a href='https://vite.dev' target='_blank'>
-          <img src={viteLogo} className='logo' alt='Vite logo' />
-        </a>
-        <a href='https://react.dev' target='_blank'>
-          <img src={reactLogo} className='logo react' alt='React logo' />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className='card'>
-        <button onClick={() => setCount(count => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className='read-the-docs'>
-        Click on the Vite and React logos to learn more
-      </p>
       <Input<{ name: string }>
         className={'border'}
         list={[{ name: 'a' }, { name: 'b' }, { name: 'c' }, { name: 'd' }]}
