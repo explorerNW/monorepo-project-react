@@ -2,7 +2,7 @@ import { defineConfig } from 'tsup';
 
 export default defineConfig({
   entry: ['src/index.ts'],
-  target: 'ES2020',
+  target: 'esnext',
   // dts: true,
   shims: true,
   minify: 'terser',

@@ -1,18 +1,22 @@
-import React, { useState, useMemo, useCallback } from 'react';
+import { useState, useMemo, useCallback } from 'react';
 
-function useInput<T>(list: T[] = [], field: string) {
+interface Itemtype {
+  [key: string]: string;
+}
+
+function useInput<T extends Itemtype>(list: T[] = [], field: string) {
   const [value, setValue] = useState('');
-  const onChange = useCallback(e => {
+  const onChange = useCallback((e: { target: { value: string } }) => {
     setValue(e.target.value);
   }, []);
-  const filteredList = useMemo(() => {
+  const filteredList: T[] = useMemo(() => {
     return list.filter(item => item[field].includes(value));
   }, [list, value, field]);
 
   return { value, filteredList, onChange };
 }
 
-export function Input<T>({
+export function Input<T extends Itemtype>({
   className,
   list,
   field,
