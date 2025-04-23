@@ -50,10 +50,10 @@ function App() {
         list={[{ name: 'a' }, { name: 'b' }, { name: 'c' }, { name: 'd' }]}
         field='name'
       />
-      <div>
-        <button onClick={increment}>increment</button>
-        <button onClick={decrement}>decrement</button>
+      <div className='flex items-center gap-2'>
+        <button className='p-2' onClick={increment}>increment</button>
         <span>{count}</span>
+        <button className='p-2' onClick={decrement}>decrement</button>
       </div>
     </>
   );
