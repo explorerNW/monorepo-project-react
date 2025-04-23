@@ -16,7 +16,7 @@ function useInput<T extends Itemtype>(list: T[] = [], field: string) {
   return { value, filteredList, onChange };
 }
 
-export function Input<T extends Itemtype>({
+export default function Input<T extends Itemtype>({
   className,
   list,
   field,
