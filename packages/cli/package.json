@@ -17,9 +17,10 @@
   "author": "explorerNW",
   "license": "ISC",
   "devDependencies": {
+    "@types/node": "^22.13.11",
     "commander": "^13.0.0",
-    "tsup": "^8.3.5",
     "picocolors": "^1.1.1",
-    "prompts": "^2.4.2"
+    "prompts": "^2.4.2",
+    "tsup": "^8.3.5"
   }
 }
