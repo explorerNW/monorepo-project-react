@@ -3,7 +3,7 @@ import { worker, assembly } from '@me/utils';
 
 import './App.css';
 
-import { Input } from '@me/ui';
+import { Button, Input } from '@me/ui';
 import { useCountStore } from '../zustand-store/store';
 
 const performance = () => {
@@ -50,10 +50,14 @@ function App() {
         list={[{ name: 'a' }, { name: 'b' }, { name: 'c' }, { name: 'd' }]}
         field='name'
       />
-      <div className='flex items-center gap-2'>
-        <button className='p-2' onClick={increment}>increment</button>
+      <div className='flex items-center gap-[1rem]'>
+        <Button variant='primary' onClick={increment}>
+          increment
+        </Button>
         <span>{count}</span>
-        <button className='p-2' onClick={decrement}>decrement</button>
+        <Button variant='primary' onClick={decrement}>
+          decrement
+        </Button>
       </div>
     </>
   );

@@ -3,9 +3,11 @@ import { defineConfig } from 'tsup';
 export default defineConfig({
   entry: ['src/index.ts'],
   target: 'esnext',
-  // dts: true,
+  dts: true,
   shims: true,
   minify: 'terser',
   format: ['esm'],
   outDir: 'dist',
+  sourcemap: true,
+  clean: true,
 });
