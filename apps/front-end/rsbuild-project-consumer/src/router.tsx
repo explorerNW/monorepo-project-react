@@ -4,6 +4,12 @@ import { lazy, Suspense } from 'react';
 
 const UserProfile = lazy(() => import('./pages/user-profile'));
 
+const UserProfileWrapper = () => (
+  <Suspense fallback={'loading...'}>
+    <UserProfile />
+  </Suspense>
+);
+
 const router = createBrowserRouter([
   {
     path: '',
@@ -11,11 +17,7 @@ const router = createBrowserRouter([
   },
   {
     path: 'user-profile',
-    element: (
-      <Suspense fallback={'loading...'}>
-        <UserProfile />
-      </Suspense>
-    ),
+    element: <UserProfileWrapper />,
   },
 ]);
 
