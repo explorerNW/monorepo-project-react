@@ -4,6 +4,7 @@ import { worker, assembly } from '@me/utils';
 import './App.css';
 
 import { Input } from '@me/ui';
+import { useCountStore } from '../zustand-store/store';
 
 const performance = () => {
   // 创建一个 PerformanceObserver 实例，并定义一个回调函数来处理性能条目
@@ -22,6 +23,7 @@ const performance = () => {
 
 function App() {
   const ref = useRef<{ loaded: boolean }>({ loaded: false });
+  const { count, increment, decrement } = useCountStore();
 
   useEffect(() => {
     if (!ref.current.loaded) {
@@ -43,12 +45,15 @@ function App() {
 
   return (
     <>
-      <div className='flex flex-col gap-4'>
-        <Input<{ name: string }>
-          className={'border'}
-          list={[{ name: 'a' }, { name: 'b' }, { name: 'c' }, { name: 'd' }]}
-          field='name'
-        />
+      <Input<{ name: string }>
+        className={'border'}
+        list={[{ name: 'a' }, { name: 'b' }, { name: 'c' }, { name: 'd' }]}
+        field='name'
+      />
+      <div>
+        <button onClick={increment}>increment</button>
+        <button onClick={decrement}>decrement</button>
+        <span>{count}</span>
       </div>
     </>
   );

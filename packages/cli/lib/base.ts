@@ -46,7 +46,10 @@ const init = async () => {
       type: 'text',
       name: 'dir',
       message: 'Where to put the files?',
-      initial: __dirname.split('/').pop(),
+      initial: new URL('.', import.meta.url).pathname
+        .split('/')
+        .filter(Boolean)
+        .pop(),
     },
   ]);
 
