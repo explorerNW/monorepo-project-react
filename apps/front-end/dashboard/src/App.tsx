@@ -12,7 +12,7 @@ const performance = () => {
     const entries = list.getEntries();
     entries.forEach(entry => {
       // 处理每个性能条目，例如打印出条目名称和开始时间
-      console.log(entry.name, entry.startTime);
+      console.log(entry.name, entry.startTime, 'ms');
     });
   });
 
@@ -33,17 +33,23 @@ function App() {
       worker.calculator([1, 2, 3, 4, 5, 6, 7, 8, 9]).then(res => {
         console.log('worker.calculator: ', res);
       });
+      worker.counter().then(async obj => {
+        await obj.increment();
+        console.log('obj.count:', await obj.count);
+      });
       ref.current.loaded = true;
     }
   }, []);
 
   return (
     <>
-      <Input<{ name: string }>
-        className={'border'}
-        list={[{ name: 'a' }, { name: 'b' }, { name: 'c' }, { name: 'd' }]}
-        field='name'
-      />
+      <div className='flex flex-col gap-4'>
+        <Input<{ name: string }>
+          className={'border'}
+          list={[{ name: 'a' }, { name: 'b' }, { name: 'c' }, { name: 'd' }]}
+          field='name'
+        />
+      </div>
     </>
   );
 }
