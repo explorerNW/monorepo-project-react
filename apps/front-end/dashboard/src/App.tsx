@@ -5,7 +5,6 @@ import { Button, Input } from '@me/ui';
 import { useCountStore } from '../zustand-store/store';
 
 import './App.css';
-import '@me/ui/dist/index.css';
 
 const performance = () => {
   // 创建一个 PerformanceObserver 实例，并定义一个回调函数来处理性能条目
