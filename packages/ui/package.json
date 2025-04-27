@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
+  "style": "./dist/index.css",
   "exports": {
     ".": {
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
-    },
-    "./dist/index.css": "./dist/index.css"
+    }
   },
   "scripts": {
     "dev": "tsup --watch",

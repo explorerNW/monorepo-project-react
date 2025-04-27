@@ -14,7 +14,7 @@ export default defineConfig({
   loader: {
     '.css': 'css',
   },
-  injectStyle: false,
+  injectStyle: true,
   splitting: true,
   treeshake: true,
   outExtension: ({ format }) => ({
