@@ -1,5 +1,5 @@
 import { VariantProps } from 'tailwind-variants';
-import { buttonStyles } from './buttonStyles.js';
+import { buttonStyles } from './buttonStyles';
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
